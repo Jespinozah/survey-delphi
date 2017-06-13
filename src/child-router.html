@@ -1,17 +1,18 @@
 <template>
-  <section class="au-animate">
-    <h2>${heading}</h2>
-    <div>
-      <div class="col-md-2">
-        <ul class="well nav nav-pills nav-stacked">
-          <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
-            <a href.bind="row.href">${row.title}</a>
-          </li>
-        </ul>
+  <section class="au-animate row">
+      <h2>${heading}</h2>
+      <div>
+        <div class="col m2">
+          <m:link-collection>
+            <m:link-collection-item
+               repeat.for="row of router.navigation"
+               href.bind="row.href"
+               class="${row.isActive ? 'active' : ''}"></m:link-collection-item>
+          </m:link-collection>
+        </div>
+        <div class="col md10" style="padding: 0">
+          <router-view></router-view>
+        </div>
       </div>
-      <div class="col-md-10" style="padding: 0">
-        <router-view></router-view>
-      </div>
-    </div>
   </section>
-</template>
+</template> 
