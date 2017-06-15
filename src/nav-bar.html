@@ -1,18 +1,20 @@
 <template bindable="router">
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">${router.title}</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse">
-        <m:icon>menu</m:icon>
-      </a>
+      <div class="container">
+        <a href="#" class="brand-logo">${router.title}</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse">
+          <m:icon>menu</m:icon>
+        </a>
 
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li repeat.for="route of router.navigation" class="${route.isActive ? 'active' : ''}"><a href.bind="route.href">${route.title}</a></li>
-      </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li repeat.for="route of router.navigation" class="${route.isActive ? 'active' : ''}"><a href.bind="route.href">${route.title}</a></li>
+        </ul>
 
-      <ul class="side-nav" id="mobile-demo">
-        <li repeat.for="route of router.navigation"><a href.bind="route.href">${route.title}</a></li>
-      </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li repeat.for="route of router.navigation"><a href.bind="route.href">${route.title}</a></li>
+        </ul>
+      </div>
 
     </div>
   </nav>
