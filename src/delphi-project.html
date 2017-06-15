@@ -1,5 +1,43 @@
 <template>
-  <br>
-  <br>
-  ${message}
+  <body>
+      <div class="container">
+        <h2>${message}</h2>
+        <div class=row>
+          <a class="btn-floating btn-small waves-effect waves-light red right"><i class="material-icons">add</i></a>
+        </div>
+        <div class="row">
+          <div class="col s4">
+            <div class="card grey lighten-4">
+              <md-collection-header>
+                <h4>My Projects</h4>
+              </md-collection-header>
+            </div>
+          </div>
+          <div class="col s8">
+            <div class="card grey lighten-3">
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="project_name" type="text" class="validate">
+                    <label for="project_name">Nombre del proyecto</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input id="theme" type="text" class="validate">
+                    <label for="theme">Tema</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="description" type="text" class="validate">
+                    <label for="description">Description</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+  </body>
 </template>

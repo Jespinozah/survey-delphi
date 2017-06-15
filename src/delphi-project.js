@@ -1,5 +1,5 @@
 export class DelphiProject {
   constructor() {
-    this.message = "DelphiProject";
+    this.message = "Delphi Projects";
   }
 }
